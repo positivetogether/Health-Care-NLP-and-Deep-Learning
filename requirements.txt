@@ -2,12 +2,10 @@ streamlit
 python-dotenv
 pandas
 numpy
-matplotlib
 joblib
 openai
 transformers
 torch
 accelerate
 scikit-learn
-scipy
-gender-guesser
+plotly

@@ -2,13 +2,13 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 import joblib
 import cleaning
 from transformers import pipeline
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.preprocessing import OneHotEncoder, MultiLabelBinarizer
+import plotly.express as px
 
 # Load the model and vectorizer for initial distinguish of prediction
 svm_model = joblib.load('svm_model.pkl')
@@ -340,10 +340,10 @@ if user_query:
                     st.write("Trend analysis on heart disease incidence over the years:")
                     st.write(heart_disease_trend)
                     
-                    st.line_chart(heart_disease_trend,
-                                width=1000,
-                                height=400,
-                                use_container_width=False)
+                    heart_disease_trend.name = 'Value'  # Name the series for the y-axis
+                    fig = px.line(heart_disease_trend, x=heart_disease_trend.index, y='Value')
+                    fig.update_yaxes(showticklabels=False)
+                    st.plotly_chart(fig, use_container_width=True, height=400)
 
                 else:
                     st.write("This kind of question not yet supported!")
