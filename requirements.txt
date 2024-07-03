@@ -4,8 +4,8 @@ pandas
 numpy
 joblib
 openai
-transformers
 torch
 accelerate
 scikit-learn
-plotly
+transformers==4.36.1
+plotly==5.18.1
