@@ -223,7 +223,7 @@ if user_query:
 
                     df_try['symptoms'].replace('', 'Other', inplace=True)
 
-                    st.write("The following process would take around 10 mins...")
+                    # st.write("The following process would take around 10 mins...")
 
                     # Apply the extraction function to each relevant column
                     df_try['diagnosis_description'] = df_try['description'].apply(cleaning.extract_disease)
