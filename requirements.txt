@@ -1,0 +1,11 @@
+streamlit
+python-dotenv
+pandas
+numpy
+matplotlib
+joblib
+openai
+transformers
+torch
+accelerate
+sklearn
