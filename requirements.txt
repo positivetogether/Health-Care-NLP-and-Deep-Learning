@@ -8,4 +8,4 @@ openai
 transformers
 torch
 accelerate
-sklearn
+scikit-learn
